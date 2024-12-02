@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "db-manager"
+version = "0.1.0"
+description = ""
+authors = ["sean <sean.li@vectorindex.cloud>"]
+readme = "README.md"
+packages = [{include = "db_manager", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+omegaconf = "^2.3.0"
+pystray = "^0.19.5"
+pillow = "^11.0.0"
+litecli = "^1.13.2"
+sqlite-web = "^0.6.4"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
