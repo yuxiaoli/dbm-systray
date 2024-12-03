@@ -167,3 +167,4 @@ temp/
 logs/
 .vs/
 .python-version
+scripts/
