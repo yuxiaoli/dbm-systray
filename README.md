@@ -5,7 +5,14 @@ Database Tray Application
 ## Installation
 
 ```sh
-# Install the package\pip install db-systray
+# Create a virtual environment
+python -m venv venv
+
+# Activate virtual environment (Windows)
+venv\Scripts\activate
+
+# Install the package
+pip install db-systray
 ```
 
 ## Usage
