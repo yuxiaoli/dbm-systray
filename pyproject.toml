@@ -1,6 +1,7 @@
 [tool.poetry]
-name = "db-manager"
-version = "0.1.0"
+#name = "db-manager"
+name = "db-systray"
+version = "0.1.1"
 description = ""
 authors = ["sean <sean.li@vectorindex.cloud>"]
 readme = "README.md"
