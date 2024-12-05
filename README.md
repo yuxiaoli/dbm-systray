@@ -11,15 +11,15 @@ python -m venv venv
 # Activate virtual environment (Windows)
 venv\Scripts\activate
 
-# Install the package
-pip install dbm-systray
+# Install dependencies
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 ```sh
 # View help
-python app.py -h
+python src/db_manager/app.py -h
 
 usage: app.py [-h] [-c CONFIG] [-p PORTS PORTS]
 
