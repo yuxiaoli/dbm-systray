@@ -12,7 +12,7 @@ python -m venv venv
 venv\Scripts\activate
 
 # Install the package
-pip install db-systray
+pip install dbm-systray
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ options:
 The `config.json` file should be a JSON array where each element represents an entry with the following properties:
 
 - `name` (string): The name of the resource.
-- `path` (string): The file path to the resource (e.g., SQLite database or JSON file).
+- `path` (string): The file path to the resource. Only `.sqlite` and `.json` file extensions are supported.
 
 ### JSON Schema for `config.json`
 
@@ -53,7 +53,8 @@ The `config.json` file should be a JSON array where each element represents an e
         "type": "string"
       },
       "path": {
-        "type": "string"
+        "type": "string",
+        "pattern": "\\.(sqlite|json)$"
       }
     },
     "required": ["name", "path"],
