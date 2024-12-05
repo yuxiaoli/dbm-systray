@@ -35,8 +35,10 @@ options:
 
 ## Environment Configuration
 
-The program will read the startup directory and look for a `.env` file. In the `.env` file, you can configure the following environment variables:
+The program will read the starting directory and look for a `.env` file. In the `.env` file, you can configure the following environment variables:
 
-- `EDITOR`: Specify the editor to be used for editing configuration files.
-- `SQLITE_BROWSER_EXE`: Specify the path to the SQLite browser executable.
+1. `EDITOR` - Specifies the text editor to be used.
+2. `SQLITE_BROWSER_EXE` - Path to the SQLite browser executable.
+3. `SQLITE_WEB` - Configuration for the SQLite web server.
+4. `LITECLI` - Path to the LiteCLI executable for interacting with SQLite databases.
 

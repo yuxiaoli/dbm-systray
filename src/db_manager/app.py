@@ -73,7 +73,10 @@ def start_sqlite_web_server(file_path, app_state):
     # command_line = f'sqlite_web {file_path}'
     try:
         # Start the sqlite_web server in a new console window
-        proc = subprocess.Popen(['sqlite_web', "-p", str(port), file_path], creationflags=CREATE_NEW_CONSOLE)
+        sqlite_web = os.getenv('SQLITE_WEB')
+        if not sqlite_web:
+            sqlite_web = "sqlite_web"
+        proc = subprocess.Popen([sqlite_web, "-p", str(port), file_path], creationflags=CREATE_NEW_CONSOLE)
         app_state.server_processes[file_path] = {
             "process": proc,
             "port": port
@@ -120,10 +123,13 @@ def generate_menu(db_name, file_path, app_state):
                 "SQLite Browser",
                 lambda: run_command(sqlite_browser, file_path)
             ))
+            litecli = os.getenv('LITECLI')
+            if not litecli:
+                litecli = "litecli"
             menu_items.append(MenuItem(
                 # "Open litecli",
                 "LiteCli",
-                lambda: run_in_new_terminal('litecli', file_path)
+                lambda: run_in_new_terminal(litecli, file_path)
             ))
             # For sqlite_web server, we need to check if the server is running
             def start_server_action():
