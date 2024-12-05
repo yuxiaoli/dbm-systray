@@ -1,4 +1,4 @@
-# db-systray
+# dbm-systray
 
 Database Tray Application
 
@@ -32,4 +32,11 @@ options:
   -p PORTS PORTS, --ports PORTS PORTS
                         available ports: <starting_port_number> <num_ports>
 ```
+
+## Environment Configuration
+
+The program will read the startup directory and look for a `.env` file. In the `.env` file, you can configure the following environment variables:
+
+- `EDITOR`: Specify the editor to be used for editing configuration files.
+- `SQLITE_BROWSER_EXE`: Specify the path to the SQLite browser executable.
 
