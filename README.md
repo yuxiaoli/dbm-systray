@@ -33,6 +33,35 @@ options:
                         available ports: <starting_port_number> <num_ports>
 ```
 
+## Configuration File Format
+
+The `config.json` file should be a JSON array where each element represents an entry with the following properties:
+
+- `name` (string): The name of the resource.
+- `path` (string): The file path to the resource (e.g., SQLite database or JSON file).
+
+### JSON Schema for `config.json`
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "path": {
+        "type": "string"
+      }
+    },
+    "required": ["name", "path"],
+    "additionalProperties": false
+  }
+}
+```
+
 ## Environment Configuration
 
 The program will read the starting directory and look for a `.env` file. In the `.env` file, you can configure the following environment variables:
