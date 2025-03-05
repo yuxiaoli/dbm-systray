@@ -179,6 +179,14 @@ def generate_menu(db_name, file_path, app_state):
                 "Edit...",
                 lambda: run_command(editor, file_path)
             ))
+            jsoncli = os.getenv('JSONCLI')
+            if not jsoncli:
+                jsoncli = "jsoncli"
+            menu_items.append(MenuItem(
+                # "Open jsoncli",
+                "JsonCli",
+                lambda: run_in_new_terminal(jsoncli, file_path)
+            ))
             menu_items.append(MenuItem(
                 "Open directory",
                 lambda: open_directory(file_path)

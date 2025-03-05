@@ -15,6 +15,7 @@ pillow = "^11.0.0"
 litecli = "^1.13.2"
 sqlite-web = "^0.6.4"
 python-dotenv = "^1.0.1"
+json-manager-cli = "^0.1.4"
 
 
 [build-system]
